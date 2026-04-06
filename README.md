@@ -14,3 +14,5 @@ A clear, polite, and professional draft email response that addresses the custom
 
 Why this task is valuable:
 Customer support responses are repetitive and time-sensitive, making them well-suited for partial automation. This system can help reduce response time, improve consistency in tone and policy adherence, and allow human agents to focus on more complex or sensitive cases.
+
+video link: https://youtu.be/_ARJ7mEkgkc
