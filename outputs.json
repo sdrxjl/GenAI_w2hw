@@ -1,0 +1,65 @@
+[
+  {
+    "id": "case_1_normal",
+    "status": "success",
+    "input": {
+      "customer_message": "Hi, I received my order yesterday but one of the items was damaged. Can you help?",
+      "context": "Company policy allows refunds or replacements for damaged items within 30 days."
+    },
+    "output": "Subject: Regarding your recent order - Damaged item\n\nDear [Customer Name],\n\nI'm so sorry to hear that one of the items in your order arrived damaged. We certainly want to help make this right for you.\n\nTo assist you with a replacement or refund, could you please provide your order number and let us know which specific item was damaged? A brief description of the damage would also be very helpful.\n\nOnce we have this information, we'll be able to quickly process a resolution for you. Please don't hesitate to reach out if you have any further questions.\n\nSincerely,\n\n[Your Name]\nCustomer Support"
+  },
+  {
+    "id": "case_2_shipping_delay",
+    "status": "success",
+    "input": {
+      "customer_message": "My package was supposed to arrive last week but I still haven't received it. What's going on?",
+      "context": "Shipping delays may occur. Customer can request tracking info or refund if lost."
+    },
+    "output": "Subject: Regarding Your Recent Order\n\nDear [Customer Name],\n\nI'm sorry to hear your package hasn't arrived yet and understand how frustrating it is when a delivery is delayed. While shipping delays can sometimes occur, we definitely want to help you locate your order.\n\nTo assist you further, could you please reply with your order number? Once we have that, we can look up the detailed tracking information for you.\n\nPlease don't hesitate to let us know if you have any other questions or need further assistance."
+  },
+  {
+    "id": "case_3_edge_angry_customer",
+    "status": "success",
+    "input": {
+      "customer_message": "This is ridiculous. I've emailed twice and no one replied. Your service is terrible.",
+      "context": "Company aims to maintain polite and professional tone at all times."
+    },
+    "output": "Subject: We're sorry you haven't heard from us – How can we help?\n\nDear Customer,\n\nWe sincerely apologize that you haven't received a reply to your previous emails, and we understand your frustration with this experience. That's certainly not the level of service we aim to provide.\n\nTo help us look into this and assist you promptly, could you please provide us with the email address you used previously, the subject line of your emails, or the date they were sent? Alternatively, if you could briefly describe the issue you were trying to resolve, we'll be happy to help you directly now.\n\nWe're here to assist you and look forward to hearing from you.\n\nSincerely,\n\n[Your Name]\nCustomer Support"
+  },
+  {
+    "id": "case_4_edge_missing_info",
+    "status": "success",
+    "input": {
+      "customer_message": "I want a refund.",
+      "context": "Refunds require order number and reason."
+    },
+    "output": "Subject: Regarding Your Refund Request\n\nDear [Customer Name],\n\nThank you for contacting us about your refund request. To help us process this efficiently for you, please provide your order number and the reason for the refund. Once we have this information, we will be able to assist you further.\n\nPlease don't hesitate to reach out if you have any other questions!\n\nBest regards,\n\n[Your Name]\nCustomer Support"
+  },
+  {
+    "id": "case_5_failure_hallucination_risk",
+    "status": "success",
+    "input": {
+      "customer_message": "Can you confirm if my product qualifies for a lifetime warranty?",
+      "context": "Warranty details are unclear or not provided."
+    },
+    "output": "Subject: Regarding Your Product Warranty Inquiry\n\nDear [Customer Name],\n\nThank you for reaching out regarding your product's warranty. To help us confirm its eligibility and provide you with the most accurate information, could you please share your order number or the product's serial number? This will allow us to look up the specific warranty details associated with your purchase.\n\nWe are happy to assist you further once we have these details.\n\nBest regards,\n\n[Your Name]\nCustomer Support Team"
+  },
+  {
+    "id": "case_6_refund_policy_conflict",
+    "status": "success",
+    "input": {
+      "customer_message": "I used the product for 3 months and now I want a full refund.",
+      "context": "Refunds are only allowed within 30 days of purchase."
+    },
+    "output": "Subject: Regarding Your Recent Refund Request\n\nDear Valued Customer,\n\nThank you for contacting us regarding your request for a full refund. We understand you've been using the product for three months. Our refund policy states that full refunds are available within 30 days of the original purchase.\n\nAs your purchase falls outside of this 30-day window, we are unable to process a full refund at this time. We appreciate your understanding and are here to assist if you have any further questions or concerns.\n\nSincerely,\n\n[Your Name/Company Name] Customer Support"
+  },
+  {
+    "id": "case_7_irrelevant_or_confusing",
+    "status": "success",
+    "input": {
+      "customer_message": "I love your products but also my order might be wrong? Not sure. Anyway thanks.",
+      "context": "Unclear issue description."
+    },
+    "output": "Subject: Regarding Your Recent Order Inquiry\n\nHi [Customer Name],\n\nThank you for your kind words about our products! We understand you might have a concern about your recent order and we're here to help.\n\nTo assist you best, could you please provide your order number and describe what you believe might be incorrect with your delivery? Once we have these details, we can look into it for you right away.\n\nWe look forward to hearing from you and helping to resolve this.\n\nBest regards,\n[Your Name]\nCustomer Support"
+  }
+]

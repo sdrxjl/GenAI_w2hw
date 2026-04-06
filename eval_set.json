@@ -1,0 +1,58 @@
+[
+  {
+    "id": "case_1_normal",
+    "input": {
+      "customer_message": "Hi, I received my order yesterday but one of the items was damaged. Can you help?",
+      "context": "Company policy allows refunds or replacements for damaged items within 30 days."
+    },
+    "expected_behavior": "Apologize for the issue, acknowledge the damage, offer refund or replacement options, and ask for any required details (e.g., photos or order number)."
+  },
+  {
+    "id": "case_2_shipping_delay",
+    "input": {
+      "customer_message": "My package was supposed to arrive last week but I still haven't received it. What's going on?",
+      "context": "Shipping delays may occur. Customer can request tracking info or refund if lost."
+    },
+    "expected_behavior": "Acknowledge delay, apologize, offer to check tracking, provide next steps, and avoid making guarantees without confirmation."
+  },
+  {
+    "id": "case_3_edge_angry_customer",
+    "input": {
+      "customer_message": "This is ridiculous. I've emailed twice and no one replied. Your service is terrible.",
+      "context": "Company aims to maintain polite and professional tone at all times."
+    },
+    "expected_behavior": "Stay calm and professional, apologize for lack of response, acknowledge frustration, and offer immediate assistance."
+  },
+  {
+    "id": "case_4_edge_missing_info",
+    "input": {
+      "customer_message": "I want a refund.",
+      "context": "Refunds require order number and reason."
+    },
+    "expected_behavior": "Politely ask for missing details (order number, reason), do not assume information, and guide customer on next steps."
+  },
+  {
+    "id": "case_5_failure_hallucination_risk",
+    "input": {
+      "customer_message": "Can you confirm if my product qualifies for a lifetime warranty?",
+      "context": "Warranty details are unclear or not provided."
+    },
+    "expected_behavior": "Do not hallucinate warranty information, state uncertainty, and suggest checking official policy or escalating to support."
+  },
+  {
+    "id": "case_6_refund_policy_conflict",
+    "input": {
+      "customer_message": "I used the product for 3 months and now I want a full refund.",
+      "context": "Refunds are only allowed within 30 days of purchase."
+    },
+    "expected_behavior": "Politely decline the refund based on policy, explain the rule clearly, and offer alternative help if possible."
+  },
+  {
+    "id": "case_7_irrelevant_or_confusing",
+    "input": {
+      "customer_message": "I love your products but also my order might be wrong? Not sure. Anyway thanks.",
+      "context": "Unclear issue description."
+    },
+    "expected_behavior": "Acknowledge message, ask clarifying questions, and avoid making assumptions."
+  }
+]
