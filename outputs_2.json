@@ -1,0 +1,65 @@
+[
+  {
+    "id": "case_1_normal",
+    "status": "success",
+    "input": {
+      "customer_message": "Hi, I received my order yesterday but one of the items was damaged. Can you help?",
+      "context": "Company policy allows refunds or replacements for damaged items within 30 days."
+    },
+    "output": "Hello, I'm sorry to hear that one of your items arrived damaged. Our policy allows for refunds or replacements for damaged items within 30 days, and we'd be happy to help resolve this for you.\n\nTo proceed, please provide your order number and a brief description of the damaged item. Once we have this information, we will be able to assist you further."
+  },
+  {
+    "id": "case_2_shipping_delay",
+    "status": "success",
+    "input": {
+      "customer_message": "My package was supposed to arrive last week but I still haven't received it. What's going on?",
+      "context": "Shipping delays may occur. Customer can request tracking info or refund if lost."
+    },
+    "output": "Hello,\n\nI'm sorry to hear your package hasn't arrived as expected. To help me investigate this for you, could you please provide your order number? Once I have that, I can look into the status of your shipment and explore options like providing tracking information or discussing a resolution if the package is confirmed lost.\n\nThank you for your patience while we look into this."
+  },
+  {
+    "id": "case_3_edge_angry_customer",
+    "status": "success",
+    "input": {
+      "customer_message": "This is ridiculous. I've emailed twice and no one replied. Your service is terrible.",
+      "context": "Company aims to maintain polite and professional tone at all times."
+    },
+    "output": "Dear Customer,\n\nI sincerely apologize for the frustration and inconvenience caused by the delay in our response to your previous emails. That is certainly not the experience we want for you.\n\nTo help me investigate this and assist you promptly, could you please provide any relevant details such as your order number or the email address you used for your previous messages? Once we have this information, we will look into your request immediately and ensure you receive the support you need."
+  },
+  {
+    "id": "case_4_edge_missing_info",
+    "status": "success",
+    "input": {
+      "customer_message": "I want a refund.",
+      "context": "Refunds require order number and reason."
+    },
+    "output": "Thank you for contacting us regarding your refund request. To help us process this for you, please provide your order number and the reason for the refund. Once we receive this information, our team will be happy to review your request and outline the next steps."
+  },
+  {
+    "id": "case_5_failure_hallucination_risk",
+    "status": "success",
+    "input": {
+      "customer_message": "Can you confirm if my product qualifies for a lifetime warranty?",
+      "context": "Warranty details are unclear or not provided."
+    },
+    "output": "Thank you for reaching out about your product's warranty. I understand you'd like to confirm if it qualifies for a lifetime warranty. Based on the information currently available, I am unable to confirm specific warranty details. For accurate information, please refer to our official warranty policy on our website, or share your product's model and purchase date so we can escalate your inquiry to a specialist."
+  },
+  {
+    "id": "case_6_refund_policy_conflict",
+    "status": "success",
+    "input": {
+      "customer_message": "I used the product for 3 months and now I want a full refund.",
+      "context": "Refunds are only allowed within 30 days of purchase."
+    },
+    "output": "Thank you for reaching out regarding your refund request. Our records indicate that refunds are permitted within 30 days of purchase. As your product was used for three months, this falls outside our standard refund window. Therefore, we are unable to process a full refund at this time. Please let us know if you have any other questions."
+  },
+  {
+    "id": "case_7_irrelevant_or_confusing",
+    "status": "success",
+    "input": {
+      "customer_message": "I love your products but also my order might be wrong? Not sure. Anyway thanks.",
+      "context": "Unclear issue description."
+    },
+    "output": "Thank you for your kind words about our products! We're sorry to hear there might be an issue with your order. To help us investigate, please provide your order number and a brief description of what you believe is incorrect. Once we have this information, our team will be happy to look into it for you."
+  }
+]
